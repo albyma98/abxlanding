@@ -1,0 +1,116 @@
+---
+const steps = [
+  {
+    number: 1,
+    duration: 'Giorni 1-2',
+    title: 'Onboarding',
+    description:
+      "Personalizziamo la piattaforma con i colori, il logo e i contenuti del tuo club. Carichiamo il calendario e integriamo gli sponsor con i loro materiali.",
+  },
+  {
+    number: 2,
+    duration: 'Giorni 3-10',
+    title: 'Setup pre-evento',
+    description:
+      "Definiamo le attivazioni: quiz live, missioni, contenuti sponsor. Predisponiamo i QR code per volantini, rollup e biglietti. Test su dispositivi reali.",
+  },
+  {
+    number: 3,
+    duration: 'Giorno 14',
+    title: 'Prima partita',
+    description:
+      "I tifosi accedono via QR code o link. Quiz live durante i timeout, attivazioni sponsor durante i quarti, raccolta dati con consenso. Voi vedete tutto in tempo reale.",
+  },
+  {
+    number: 4,
+    duration: 'Stagione',
+    title: 'Crescita continua',
+    description:
+      "Ogni partita arricchisce il database. Iteriamo sulle attivazioni più efficaci. Reportistica mensile sui ricavi sponsor generati e sulla crescita del database tifosi.",
+  },
+];
+---
+
+<section id="come-funziona" class="relative overflow-hidden bg-white py-24 lg:py-32">
+  <div
+    class="pointer-events-none absolute inset-0 -z-10 [background-image:radial-gradient(circle_at_center,rgba(15,30,61,0.05)_1px,transparent_1.5px)] [background-size:26px_26px]"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-navy/10 to-transparent"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-navy/10 to-transparent"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="mx-auto max-w-6xl px-6 lg:px-10">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-green">
+        Come funziona
+      </p>
+      <h2
+        class="mt-4 font-display text-3xl font-semibold leading-[1.15] tracking-tight text-brand-navy sm:text-4xl lg:text-5xl"
+      >
+        In <span class="text-brand-green">2 settimane</span> siete operativi.
+      </h2>
+      <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-brand-navy/70">
+        Nessuna integrazione complessa, nessun investimento iniziale in hardware. Vi
+        affianchiamo passo dopo passo, dal setup alla prima partita.
+      </p>
+    </div>
+
+    <ol
+      class="mt-20 grid list-none grid-cols-1 gap-12 lg:mt-24 lg:grid-cols-4 lg:gap-12"
+      aria-label="Quattro step del processo di onboarding"
+    >
+      {
+        steps.map((step, index) => (
+          <li class="relative text-center">
+            {index < steps.length - 1 && (
+              <span
+                class="pointer-events-none absolute left-1/2 top-8 hidden h-px w-[calc(100%+3rem)] bg-brand-green/30 lg:block"
+                aria-hidden="true"
+              />
+            )}
+            <div
+              class="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-green shadow-[0_8px_20px_-8px_rgba(0,200,150,0.45)]"
+            >
+              <span class="font-display text-[28px] font-bold leading-none text-white">
+                {step.number}
+              </span>
+            </div>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-[0.16em] text-brand-navy/60">
+              {step.duration}
+            </p>
+            <h3 class="mt-2 font-display text-xl font-semibold text-brand-navy">
+              {step.title}
+            </h3>
+            <p class="mt-3 text-base leading-relaxed text-brand-navy/70">
+              {step.description}
+            </p>
+          </li>
+        ))
+      }
+    </ol>
+
+    <div
+      class="mx-auto mt-20 flex max-w-2xl flex-col items-center gap-10 text-center lg:mt-24"
+    >
+      <p class="text-xl leading-relaxed text-brand-navy">
+        Niente codice. Niente hardware. Solo
+        <span class="text-brand-green">risultati</span>.
+      </p>
+      <a
+        href="#contatti"
+        class="inline-flex items-center justify-center rounded-lg bg-brand-green px-7 py-3.5 text-base font-semibold text-brand-navy shadow-sm transition-all hover:bg-[#00d9a4] hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
+      >
+        Richiedi una demo
+      </a>
+    </div>
+  </div>
+</section>
