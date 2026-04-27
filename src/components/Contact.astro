@@ -1,7 +1,7 @@
 ---
 const reassurances = [
-  'Nessun impegno e nessun costo iniziale',
-  'Demo personalizzata sul tuo sport e la tua lega',
+  'Nessun impegno',
+  'Previsioni Personalizzate',
   'Risposta entro 24 ore lavorative',
 ];
 ---
@@ -11,7 +11,7 @@ const reassurances = [
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
       <div>
         <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-green">
-          Richiedi una demo
+          Parliamone
         </p>
         <h2
           class="mt-4 font-display text-3xl font-semibold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[44px]"
@@ -136,10 +136,10 @@ const reassurances = [
             type="submit"
             class="w-full rounded-lg bg-brand-green py-4 text-base font-semibold text-brand-navy shadow-sm transition-all hover:bg-[#00d9a4] hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy disabled:cursor-not-allowed disabled:opacity-60"
           >
-            Richiedi la demo
+            Parliamone
           </button>
           <p class="mt-4 text-center text-xs leading-relaxed text-white/50">
-            Cliccando "Richiedi la demo" confermi di aver letto la nostra privacy policy.
+            Cliccando "Parliamone" confermi di aver letto la nostra privacy policy.
             Non spammiamo, non condividiamo i tuoi dati.
           </p>
         </div>
@@ -155,7 +155,7 @@ const reassurances = [
         <input
           type="hidden"
           name="_subject"
-          value="Nuova richiesta demo ArenaBoostX"
+          value="Nuova richiesta Parliamone — ArenaBoostX"
         />
       </form>
     </div>
@@ -174,7 +174,7 @@ const reassurances = [
       ) as HTMLButtonElement | null;
       if (!submitBtn) return;
 
-      const originalText = submitBtn.textContent ?? 'Richiedi la demo';
+      const originalText = submitBtn.textContent ?? 'Parliamone';
       submitBtn.disabled = true;
       submitBtn.textContent = 'Invio in corso...';
 
